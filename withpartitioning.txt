@@ -1,0 +1,19 @@
+--- create a table with partitioning 
+---repuechase_products_history_patitioning
+ 
+create table history_partitioning(
+CID INTEGER,
+UPC INTEGER,
+OID STRING,
+DT DATE,
+R_DT DATE,
+PRC float,
+QTY float,
+AMT float,
+R_QTY float,
+R_AMT float,
+WEB_PROD_ID INTEGER,
+GMM_DESC STRING,
+PARENT_MDSE_DIVN_DESC STRING),
+PARTITION BY
+  date_trunc(DT, month );
