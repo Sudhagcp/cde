@@ -1,0 +1,5 @@
+--- creating usecase1(Repurchase_products_details) stage table creation and Loading scripts without partioning.
+
+
+bq mk -t Repurchase_products_staging.products_staging
+bq load --source_format=CSV --skip_leading_rows=1 --autodetect Repurchase_products_staging.products_staging gs://b17-repurchase/Repurchase_Product.csv
